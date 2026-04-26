@@ -24,6 +24,7 @@ export function ThreeRibbon() {
 
     const state = { t0: 0 };
     class WaveCurve extends THREE.Curve<THREE.Vector3> {
+      constructor() { super(); }
       getPoint(t: number, target: THREE.Vector3 = new THREE.Vector3()) {
         const x = (t - 0.5) * 14;
         const y = Math.sin(t * Math.PI * 4 + state.t0) * 0.8;
