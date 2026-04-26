@@ -5,10 +5,10 @@ import { ThreeRibbon } from "@/components/ThreeRibbon";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Jane Doe" },
-      { name: "description", content: "Get in touch about senior or staff engineering roles, collaborations, or just to say hello." },
-      { property: "og:title", content: "Contact — Jane Doe" },
-      { property: "og:description", content: "Reach out about roles, collaborations, or anything else." },
+      { title: "Contact — Alex Chen" },
+      { name: "description", content: "Get in touch about Summer 2026 internships, collaborations, or quant/SWE conversations." },
+      { property: "og:title", content: "Contact — Alex Chen" },
+      { property: "og:description", content: "Reach out about internships, collaborations, or anything else." },
     ],
   }),
   component: ContactPage,
@@ -25,7 +25,7 @@ function ContactPage() {
             Let's <span className="text-primary">talk</span>.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground text-pretty">
-            The fastest path is email. I read every message and reply within two business days — even the ones that are clearly mass outreach (though I'll be more enthusiastic if yours isn't).
+            The fastest path is email — I read every message and reply within a day or two. Recruiters welcome; please mention the role and team in the subject so I can give you a useful answer.
           </p>
         </div>
       </section>
@@ -33,12 +33,12 @@ function ContactPage() {
       <section className="mx-auto max-w-5xl px-6 lg:px-10 pb-24">
         <div className="grid md:grid-cols-2 gap-5">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:alex.chen@example.com"
             className="group p-8 rounded-xl border border-border/60 bg-surface/30 hover:border-primary/60 transition-all"
           >
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">Email</p>
             <p className="font-display text-2xl md:text-3xl font-semibold group-hover:text-primary transition-colors break-all">
-              hello@example.com
+              alex.chen@example.com
             </p>
             <p className="mt-2 text-sm text-muted-foreground">Best for roles, collabs, and longer questions.</p>
           </a>
@@ -60,7 +60,7 @@ function ContactPage() {
           >
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">GitHub</p>
             <p className="font-display text-2xl md:text-3xl font-semibold group-hover:text-primary transition-colors">
-              @janedoe
+              @alexchen
             </p>
             <p className="mt-2 text-sm text-muted-foreground">Open-source projects and weekend experiments.</p>
           </a>
@@ -71,16 +71,16 @@ function ContactPage() {
           >
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">LinkedIn</p>
             <p className="font-display text-2xl md:text-3xl font-semibold group-hover:text-primary transition-colors">
-              /in/janedoe
+              /in/alexchen
             </p>
-            <p className="mt-2 text-sm text-muted-foreground">Full work history and recommendations.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Full education + experience, recommendations.</p>
           </a>
         </div>
 
         <div className="mt-10 p-6 rounded-xl border border-primary/30 bg-primary/5">
           <p className="font-mono text-xs uppercase tracking-widest text-primary mb-2">A note for recruiters</p>
           <p className="text-foreground/90 max-w-3xl">
-            I'm currently most interested in <span className="text-primary font-semibold">senior or staff IC roles</span> at small-to-mid-sized product companies, ideally remote-first within ±3 hours of CET. I'm not actively interviewing for management roles or agency work. Thanks for understanding!
+            I'm primarily looking for <span className="text-primary font-semibold">Summer 2026 internships</span> in software engineering, quant development, or quant research. Open to NYC, Chicago, London, and remote within North America. I'm happy to do take-home assessments and technical interviews — just send me the details.
           </p>
         </div>
       </section>

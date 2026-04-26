@@ -6,20 +6,20 @@ import { PageShell } from "@/components/PageShell";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Jane Doe — Engineer & Builder" },
-      { name: "description", content: "Portfolio of Jane Doe. Selected work, side projects, and the things that fill the in-between hours." },
-      { property: "og:title", content: "Jane Doe — Engineer & Builder" },
-      { property: "og:description", content: "Selected work, side projects, and the things that fill the in-between hours." },
+      { title: "Alex Chen — Aspiring Software Engineer & Quant" },
+      { name: "description", content: "Portfolio of Alex Chen — CS student building software, trading systems, and market research tools. Currently seeking 2026 internships." },
+      { property: "og:title", content: "Alex Chen — Aspiring Software Engineer & Quant" },
+      { property: "og:description", content: "Software, systems, and quantitative research — selected projects and ways to get in touch." },
     ],
   }),
   component: Index,
 });
 
 const stats = [
-  { k: "8+", v: "Years building" },
-  { k: "30+", v: "Shipped projects" },
-  { k: "5", v: "Open-source repos" },
-  { k: "∞", v: "Cups of coffee" },
+  { k: "3.9", v: "GPA · CS + Math" },
+  { k: "12", v: "Shipped projects" },
+  { k: "2", v: "Hackathon wins" },
+  { k: "24/7", v: "Markets watched" },
 ];
 
 function Index() {
@@ -40,25 +40,26 @@ function Index() {
             className="max-w-3xl"
           >
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-6">
-              ◆ Available for select roles — Q3 2026
+              ◆ Seeking SWE / Quant internships — Summer 2026
             </p>
             <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tighter text-balance">
-              Software,
+              Code, markets,
               <br />
-              <span className="glow-text text-primary">considered</span>
+              <span className="glow-text text-primary">and the math</span>
               <br />
-              and crafted.
+              in between.
             </h1>
             <p className="mt-8 max-w-xl text-lg text-muted-foreground text-pretty">
-              I'm Jane — a senior engineer who turns vague ambitions into shipped products.
-              Strong on systems, opinionated about UX, allergic to bloat.
+              I'm Alex — a CS &amp; Math student building software systems and quantitative
+              trading tools. I love clean code, rigorous backtests, and learning what
+              actually works in production.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
                 to="/projects"
                 className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:opacity-90 transition-all"
               >
-                See selected work
+                See my projects
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
               <Link
@@ -74,7 +75,7 @@ function Index() {
         {/* Bottom rail */}
         <div className="absolute bottom-6 inset-x-0 z-10 mx-auto max-w-7xl px-6 lg:px-10 hidden md:flex items-end justify-between text-xs font-mono uppercase tracking-widest text-muted-foreground">
           <span>Scroll ↓</span>
-          <span>Berlin · 52.52°N</span>
+          <span>NYSE · 09:30 ET</span>
         </div>
       </section>
 
@@ -96,7 +97,7 @@ function Index() {
           <div>
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">/01 — Selected work</p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
-              Things I've shipped
+              Things I've built
             </h2>
           </div>
           <Link to="/projects" className="hidden sm:inline-block text-sm text-muted-foreground hover:text-primary">
@@ -106,10 +107,10 @@ function Index() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { tag: "Fintech", title: "Ledger.io", desc: "Real-time double-entry accounting for indie SaaS." },
-            { tag: "AI", title: "Quill", desc: "Editor-first writing tool with structured AI suggestions." },
-            { tag: "Devtools", title: "Probe", desc: "Production tracing that doesn't make your bill cry." },
-            { tag: "Climate", title: "Watershed", desc: "Carbon accounting platform — led the data ingestion rewrite." },
+            { tag: "Quant", title: "Mean-Reversion Engine", desc: "Python backtester for pairs-trading on S&P 500 equities. Sharpe 1.4 over 5y." },
+            { tag: "Devtools", title: "TickStream", desc: "Low-latency market-data router in Go. Sub-millisecond p99 over WebSocket." },
+            { tag: "ML", title: "Vol Forecaster", desc: "LSTM model predicting realized volatility from option-chain features." },
+            { tag: "Web", title: "Portfolio Tracker", desc: "Full-stack app: live P&L, broker imports, tax-lot accounting. ~600 users." },
           ].map((p, i) => (
             <motion.div
               key={p.title}

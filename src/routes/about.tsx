@@ -5,9 +5,9 @@ import { PageShell } from "@/components/PageShell";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Jane Doe" },
-      { name: "description", content: "Engineer, designer, and occasional ceramicist. The short version of how I got here and how I work." },
-      { property: "og:title", content: "About — Jane Doe" },
+      { title: "About — Alex Chen" },
+      { name: "description", content: "CS & Math undergrad, aspiring software engineer and quantitative trader. The short version of how I got here." },
+      { property: "og:title", content: "About — Alex Chen" },
       { property: "og:description", content: "How I got here, how I work, and what I'm looking for next." },
     ],
   }),
@@ -15,11 +15,11 @@ export const Route = createFileRoute("/about")({
 });
 
 const timeline = [
-  { y: "2024 →", t: "Lead Engineer @ Quill", d: "AI-native writing tools." },
-  { y: "2022—24", t: "Senior Engineer @ Watershed", d: "Carbon accounting at scale." },
-  { y: "2020—22", t: "Engineer @ Stripe", d: "Issuing platform, fraud signals." },
-  { y: "2017—20", t: "Founding Engineer @ small startup", d: "Acquired in 2020." },
-  { y: "2017", t: "BSc Computer Science, TU Berlin", d: "Thesis on incremental computation." },
+  { y: "Summer 2025", t: "SWE Intern @ mid-size fintech", d: "Built monitoring dashboards for the trade-reconciliation pipeline." },
+  { y: "2024 →", t: "Treasurer · Quant Finance Club", d: "Run weekly research seminars, organize Bloomberg-terminal workshops." },
+  { y: "Summer 2024", t: "Research Asst. · Applied Math Lab", d: "Numerical methods for stochastic differential equations." },
+  { y: "2023 →", t: "BSc Computer Science + Math (Stats)", d: "GPA 3.92 · Coursework in stochastic calc, ML, distributed systems." },
+  { y: "2023", t: "First trade", d: "Lost $40 on a covered call. Learned more than the next ten profitable ones." },
 ];
 
 function AboutPage() {
@@ -33,34 +33,38 @@ function AboutPage() {
           transition={{ duration: 0.7 }}
           className="font-display text-5xl md:text-7xl font-semibold tracking-tighter text-balance leading-[1]"
         >
-          Engineer with a designer's eye, and a long memory for production incidents.
+          Junior engineer with a long list of opinions and an even longer reading list.
         </motion.h1>
 
         <div className="mt-12 grid md:grid-cols-3 gap-10 text-pretty">
           <div className="md:col-span-2 space-y-5 text-lg text-foreground/90">
             <p>
-              I've spent the last eight years building software at the awkward seam where systems engineering meets user experience. I like the boring parts — schemas, error budgets, accessibility audits — and I'll happily delete code I wrote last week if the new shape is better.
+              I'm a third-year CS &amp; Math student aiming for the intersection of software engineering and quantitative trading. I got hooked on markets after reading <em>The Man Who Solved the Market</em>, and on programming after writing my first Pine Script that lost money very efficiently.
             </p>
             <p>
-              I'm strongest as the engineer who can lead a small team through a hard zero-to-one and stay around for the boring scaling work afterwards. I write production code, I review pull requests carefully, and I take design reviews seriously.
+              These days I split my time between coursework, side projects, and the quant finance club at school. I care a lot about writing software that's correct, not just clever — backtests are easy to fool, but production isn't.
             </p>
             <p>
-              Outside work I throw pottery, run badly, and maintain a couple of small open-source tools. Always happy to chat about distributed systems, type theory, or sourdough.
+              I'm looking for a Summer 2026 internship where I can learn from senior engineers and traders who hold the bar high. Long-term I'd love to work somewhere that takes both research and engineering seriously.
             </p>
           </div>
 
           <aside className="space-y-6">
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-2">Currently</p>
-              <p>Berlin, Germany · CET</p>
+              <p>Toronto, Canada · ET</p>
             </div>
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-2">Open to</p>
-              <p>Senior / Staff IC roles · Remote-first or hybrid Berlin · No relocation</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-2">Looking for</p>
+              <p>Summer 2026 SWE / Quant Dev / Quant Research internships · Open to relocate (NYC, Chicago, London)</p>
             </div>
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-2">Likes</p>
-              <p>Postgres, Rust, slow software, pair programming, well-written incident reports.</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-2">Stack</p>
+              <p>Python, C++, Go, TypeScript · NumPy, PyTorch, kdb+ (learning), React.</p>
+            </div>
+            <div>
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-2">Reading</p>
+              <p>Hull · Sinclair · &ldquo;Designing Data-Intensive Applications.&rdquo;</p>
             </div>
           </aside>
         </div>
@@ -68,7 +72,7 @@ function AboutPage() {
 
       {/* Timeline */}
       <section className="mx-auto max-w-5xl px-6 lg:px-10 py-16 lg:py-24">
-        <h2 className="font-display text-3xl md:text-4xl font-semibold mb-10">A rough CV</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold mb-10">A rough timeline</h2>
         <ol className="relative border-l border-border/60 pl-8 space-y-10">
           {timeline.map((row, i) => (
             <motion.li

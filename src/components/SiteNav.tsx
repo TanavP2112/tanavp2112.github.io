@@ -18,7 +18,7 @@ export function SiteNav() {
         <Link to="/" className="group flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_12px_var(--primary)]" />
           <span className="font-display font-semibold tracking-tight text-lg">
-            jane<span className="text-primary">.</span>dev
+            alex<span className="text-primary">.</span>chen
           </span>
         </Link>
 
@@ -38,7 +38,7 @@ export function SiteNav() {
 
         <div className="hidden md:block">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:alex.chen@example.com"
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:opacity-90 transition-opacity"
           >
             Hire me

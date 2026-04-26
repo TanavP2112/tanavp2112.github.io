@@ -5,10 +5,10 @@ import { PageShell } from "@/components/PageShell";
 export const Route = createFileRoute("/hobbies")({
   head: () => ({
     meta: [
-      { title: "Hobbies — Jane Doe" },
-      { name: "description", content: "Pottery, running, sourdough, generative art and other things I do when I'm not at a keyboard." },
-      { property: "og:title", content: "Hobbies — Jane Doe" },
-      { property: "og:description", content: "What I do when I'm not at a keyboard." },
+      { title: "Hobbies — Alex Chen" },
+      { name: "description", content: "Chess, climbing, generative art, poker, and the side rabbit-holes that keep me curious outside of code." },
+      { property: "og:title", content: "Hobbies — Alex Chen" },
+      { property: "og:description", content: "What I do when I'm not at a keyboard or a Bloomberg terminal." },
     ],
   }),
   component: HobbiesPage,
@@ -16,40 +16,40 @@ export const Route = createFileRoute("/hobbies")({
 
 const hobbies = [
   {
+    icon: "♞",
+    title: "Chess",
+    span: "since 2015",
+    desc: "Online rapid ~1850 on Lichess. Big fan of the Catalan as White and the Caro-Kann as Black. Tactics over intuition, mostly because my intuition is bad.",
+  },
+  {
+    icon: "♠",
+    title: "Poker",
+    span: "since 2022",
+    desc: "Low-stakes NLHE cash games with friends. The math of pot odds and equity is what hooked me — and arguably what got me into trading.",
+  },
+  {
+    icon: "▲",
+    title: "Bouldering",
+    span: "since 2023",
+    desc: "Currently projecting V5s. The best mental reset I've found between problem sets. Also great for forearms when typing all day.",
+  },
+  {
     icon: "✦",
     title: "Generative art",
-    span: "since 2019",
-    desc: "Mostly p5.js and shaders. I post a sketch most weekends; some of the better ones end up plotted with an AxiDraw on heavyweight paper.",
-  },
-  {
-    icon: "◐",
-    title: "Pottery",
-    span: "since 2021",
-    desc: "Wheel-thrown stoneware, mostly mugs and small vases. I like glazes that misbehave in the kiln.",
-  },
-  {
-    icon: "⏱",
-    title: "Trail running",
-    span: "since 2018",
-    desc: "Slowly. Mostly the trails around Grunewald. Two half-marathons; one full one I'd rather not talk about.",
-  },
-  {
-    icon: "✿",
-    title: "Sourdough",
-    span: "since 2020",
-    desc: "Maintainer of one (1) starter, named Bastian. He's older than my last three side projects combined.",
+    span: "since 2022",
+    desc: "p5.js sketches and shader experiments. Most of my visualizations for school projects started as weekend doodles.",
   },
   {
     icon: "♪",
-    title: "Modular synths",
-    span: "since 2023",
-    desc: "Tiny rack, big patch cables. Ambient drones for focus, plus the occasional terrible techno experiment.",
+    title: "Lo-fi piano",
+    span: "since forever",
+    desc: "Self-taught. Mostly Ludovico Einaudi and the same four Studio Ghibli pieces I've been working on for years.",
   },
   {
     icon: "✎",
     title: "Writing",
-    span: "since forever",
-    desc: "Short essays on engineering culture, post-mortems written for non-engineers, and a half-finished novel.",
+    span: "since 2023",
+    desc: "I keep a small blog where I write up trading ideas, paper summaries, and half-baked thoughts on market microstructure.",
   },
 ];
 
@@ -59,7 +59,7 @@ function HobbiesPage() {
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-24 lg:pt-32 pb-12">
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-6">/04 — Outside the editor</p>
         <h1 className="font-display text-5xl md:text-7xl font-semibold tracking-tighter max-w-4xl text-balance leading-[1]">
-          The things that keep me <span className="text-primary">interesting</span> at dinner.
+          The things that keep me <span className="text-primary">curious</span> away from the screen.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground text-pretty">
           Recruiters always ask about the person behind the résumé. Here's the honest answer.

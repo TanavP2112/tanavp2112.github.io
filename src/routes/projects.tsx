@@ -6,10 +6,10 @@ import { ThreeRibbon } from "@/components/ThreeRibbon";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Jane Doe" },
-      { name: "description", content: "A selection of products, tools and experiments I've built across fintech, AI, devtools and climate." },
-      { property: "og:title", content: "Projects — Jane Doe" },
-      { property: "og:description", content: "A selection of products, tools and experiments I've built." },
+      { title: "Projects — Alex Chen" },
+      { name: "description", content: "Quantitative research, trading systems, and full-stack software projects built during my CS & Math studies." },
+      { property: "og:title", content: "Projects — Alex Chen" },
+      { property: "og:description", content: "Quantitative research, trading systems, and full-stack software projects." },
     ],
   }),
   component: ProjectsPage,
@@ -18,53 +18,63 @@ export const Route = createFileRoute("/projects")({
 const projects = [
   {
     year: "2025",
-    name: "Ledger.io",
-    role: "Founding Engineer",
-    tag: "Fintech / SaaS",
-    desc: "Real-time double-entry accounting designed for indie SaaS. Built the event-sourced ledger core and the audit dashboard. Live with 400+ teams.",
-    stack: ["TypeScript", "Postgres", "Kafka", "React"],
-    metric: "$12M",
-    metricLabel: "Tracked monthly",
-  },
-  {
-    year: "2024",
-    name: "Quill",
-    role: "Lead Engineer",
-    tag: "AI / Writing",
-    desc: "An editor-first writing tool that gives structured, citeable AI suggestions instead of opaque chat replies. Led both the prosemirror-based editor and the inference proxy layer.",
-    stack: ["React", "Rust", "ProseMirror", "OpenAI"],
-    metric: "27k",
-    metricLabel: "Weekly writers",
-  },
-  {
-    year: "2024",
-    name: "Probe",
-    role: "Creator",
-    tag: "Devtools / Open source",
-    desc: "Lightweight tracing for Node and Bun that ships ~3% the data of OTel without losing the moments that matter. Used by a couple of YC startups in production.",
-    stack: ["Bun", "TypeScript", "ClickHouse"],
-    metric: "2.1k",
-    metricLabel: "GitHub stars",
-  },
-  {
-    year: "2022",
-    name: "Watershed",
-    role: "Senior Engineer",
-    tag: "Climate / Data",
-    desc: "Carbon accounting platform for Fortune-500 customers. Led a 6-month rewrite of the supplier data ingestion pipeline, cutting onboarding time from weeks to days.",
-    stack: ["Python", "Snowflake", "dbt", "Next.js"],
-    metric: "10×",
-    metricLabel: "Faster onboarding",
-  },
-  {
-    year: "2021",
-    name: "Cinder",
+    name: "Mean-Reversion Engine",
     role: "Solo build",
-    tag: "Side project",
-    desc: "A tiny, fast static-site generator I use for my own blog and ~50 friends' sites. Markdown in, beautifully-typeset HTML out, no JS framework anywhere.",
-    stack: ["Go", "Templ", "Tailwind"],
-    metric: "<5kb",
-    metricLabel: "JS per page",
+    tag: "Quant / Research",
+    desc: "A vectorized Python backtester for cointegrated equity pairs in the S&P 500. Walk-forward parameter selection, transaction-cost model, and a live paper-trading bridge through Alpaca.",
+    stack: ["Python", "NumPy", "Pandas", "Alpaca API"],
+    metric: "1.4",
+    metricLabel: "Sharpe (5y BT)",
+  },
+  {
+    year: "2025",
+    name: "TickStream",
+    role: "Solo build",
+    tag: "Devtools / Systems",
+    desc: "A low-latency market-data router that fans out normalized ticks from multiple venues over WebSocket. Used internally for my own bots; learned a lot about ring buffers and GC pauses.",
+    stack: ["Go", "Redis", "WebSocket"],
+    metric: "<1ms",
+    metricLabel: "p99 latency",
+  },
+  {
+    year: "2024",
+    name: "Vol Forecaster",
+    role: "Course project + extension",
+    tag: "ML / Finance",
+    desc: "An LSTM model that forecasts 5-day realized volatility for SPX using features derived from the option chain (skew, term-structure, IV rank). Beats a GARCH(1,1) baseline by ~12% RMSE.",
+    stack: ["PyTorch", "Polars", "yfinance"],
+    metric: "+12%",
+    metricLabel: "vs GARCH baseline",
+  },
+  {
+    year: "2024",
+    name: "Portfolio Tracker",
+    role: "Full-stack",
+    tag: "Web / SaaS-ish",
+    desc: "A self-serve portfolio tracker: live P&L, CSV broker imports, FIFO tax-lot accounting, and a clean React dashboard. Started as a side project; now used by ~600 friends and r/investing folks.",
+    stack: ["TypeScript", "React", "Postgres", "tRPC"],
+    metric: "600+",
+    metricLabel: "Active users",
+  },
+  {
+    year: "2024",
+    name: "OrderBook Visualizer",
+    role: "Hackathon — 1st place",
+    tag: "Hackathon / Viz",
+    desc: "Real-time depth-of-book heatmap for crypto exchanges, built in 36 hours. Won 'Best Use of Real-Time Data' at HackTheNorth.",
+    stack: ["React", "WebGL", "Rust (WASM)"],
+    metric: "🏆",
+    metricLabel: "1st place",
+  },
+  {
+    year: "2023",
+    name: "Black-Scholes Playground",
+    role: "Learning project",
+    tag: "Education",
+    desc: "An interactive web tool to build intuition for option Greeks. Sliders for spot/vol/rate/time, live re-pricing, and 3D surface plots. My most-starred GitHub repo.",
+    stack: ["TypeScript", "D3", "Three.js"],
+    metric: "320★",
+    metricLabel: "GitHub stars",
   },
 ];
 
@@ -76,7 +86,7 @@ function ProjectsPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-32">
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-4">/02 — Projects</p>
           <h1 className="font-display text-5xl md:text-7xl font-semibold tracking-tighter max-w-3xl text-balance">
-            Selected work, in roughly the order it was made.
+            Code I've shipped, models I've trained, books I've crashed.
           </h1>
         </div>
       </section>
@@ -116,7 +126,7 @@ function ProjectsPage() {
               </div>
 
               <div className="md:col-span-2 md:text-right self-center text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all">
-                Case study →
+                Read more →
               </div>
             </motion.li>
           ))}
