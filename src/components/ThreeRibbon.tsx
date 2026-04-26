@@ -35,7 +35,7 @@ export function ThreeRibbon() {
     const curve = new WaveCurve();
     let geometry = new THREE.TubeGeometry(curve, 200, 0.04, 8, false);
     const material = new THREE.MeshBasicMaterial({
-      color: 0xd4ff3a,
+      color: 0x4d9eff,
       transparent: true,
       opacity: 0.7,
     });
