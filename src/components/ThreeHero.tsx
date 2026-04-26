@@ -29,7 +29,7 @@ export function ThreeHero() {
     const geo = new THREE.IcosahedronGeometry(1.6, 1);
     const wireframe = new THREE.WireframeGeometry(geo);
     const lineMat = new THREE.LineBasicMaterial({
-      color: 0xd4ff3a,
+      color: 0x4d9eff,
       transparent: true,
       opacity: 0.85,
     });
@@ -39,7 +39,7 @@ export function ThreeHero() {
     // Inner soft sphere (volume hint)
     const innerGeo = new THREE.IcosahedronGeometry(1.55, 0);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0xd4ff3a,
+      color: 0x4d9eff,
       transparent: true,
       opacity: 0.04,
     });
