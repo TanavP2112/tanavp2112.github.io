@@ -22,14 +22,16 @@ export function ThreeRibbon() {
     renderer.setClearColor(0x000000, 0);
     mount.appendChild(renderer.domElement);
 
-    const curve = new THREE.Curve<THREE.Vector3>();
-    let t0 = 0;
-    curve.getPoint = (t: number, target = new THREE.Vector3()) => {
-      const x = (t - 0.5) * 14;
-      const y = Math.sin(t * Math.PI * 4 + t0) * 0.8;
-      const z = Math.cos(t * Math.PI * 3 + t0) * 0.8;
-      return target.set(x, y, z);
-    };
+    const state = { t0: 0 };
+    class WaveCurve extends THREE.Curve<THREE.Vector3> {
+      getPoint(t: number, target: THREE.Vector3 = new THREE.Vector3()) {
+        const x = (t - 0.5) * 14;
+        const y = Math.sin(t * Math.PI * 4 + state.t0) * 0.8;
+        const z = Math.cos(t * Math.PI * 3 + state.t0) * 0.8;
+        return target.set(x, y, z);
+      }
+    }
+    const curve = new WaveCurve();
     let geometry = new THREE.TubeGeometry(curve, 200, 0.04, 8, false);
     const material = new THREE.MeshBasicMaterial({
       color: 0xd4ff3a,
@@ -51,7 +53,7 @@ export function ThreeRibbon() {
     let raf = 0;
     const animate = () => {
       raf = requestAnimationFrame(animate);
-      curve.t0 += 0.01;
+      state.t0 += 0.01;
       const newGeo = new THREE.TubeGeometry(curve, 200, 0.04, 8, false);
       tube.geometry.dispose();
       tube.geometry = newGeo;
