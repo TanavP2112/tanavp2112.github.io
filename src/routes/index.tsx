@@ -6,10 +6,18 @@ import { PageShell } from "@/components/PageShell";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alex Chen — Aspiring Software Engineer & Quant" },
-      { name: "description", content: "Portfolio of Alex Chen — CS student building software, trading systems, and market research tools. Currently seeking 2026 internships." },
-      { property: "og:title", content: "Alex Chen — Aspiring Software Engineer & Quant" },
-      { property: "og:description", content: "Software, systems, and quantitative research — selected projects and ways to get in touch." },
+      { title: "Tanav Palisetti — Aspiring Software Engineer & Quant" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Tanav Palisetti — Statistics student building software, trading systems, and market research tools. Currently seeking 2026 Full-Time Roles.",
+      },
+      { property: "og:title", content: "Tanav Palisetti — Aspiring Software Engineer & Quant" },
+      {
+        property: "og:description",
+        content:
+          "Software, systems, and quantitative research — selected projects and ways to get in touch.",
+      },
     ],
   }),
   component: Index,
@@ -25,7 +33,6 @@ const stats = [
 function Index() {
   return (
     <PageShell>
-      {/* HERO */}
       <section className="relative min-h-[92vh] overflow-hidden">
         <ThreeHero />
         <div
@@ -50,9 +57,9 @@ function Index() {
               in between.
             </h1>
             <p className="mt-8 max-w-xl text-lg text-muted-foreground text-pretty">
-              I'm Alex — a CS &amp; Math student building software systems and quantitative
-              trading tools. I love clean code, rigorous backtests, and learning what
-              actually works in production.
+              I'm Tanav — a Statistics &amp; CS student building software systems and quantitative
+              trading tools. I love clean code, rigorous backtests, and learning what actually works
+              in production.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
@@ -71,46 +78,66 @@ function Index() {
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom rail */}
         <div className="absolute bottom-6 inset-x-0 z-10 mx-auto max-w-7xl px-6 lg:px-10 hidden md:flex items-end justify-between text-xs font-mono uppercase tracking-widest text-muted-foreground">
           <span>Scroll ↓</span>
-          <span>NYSE · 09:30 ET</span>
         </div>
       </section>
 
-      {/* STATS */}
       <section className="border-y border-border/40 bg-surface/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((s) => (
             <div key={s.v}>
-              <div className="font-display text-4xl md:text-5xl font-semibold text-primary">{s.k}</div>
-              <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground font-mono">{s.v}</div>
+              <div className="font-display text-4xl md:text-5xl font-semibold text-primary">
+                {s.k}
+              </div>
+              <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground font-mono">
+                {s.v}
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* SELECTED WORK PREVIEW */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-32">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">/01 — Selected work</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">
+              /01 — Selected work
+            </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
               Things I've built
             </h2>
           </div>
-          <Link to="/projects" className="hidden sm:inline-block text-sm text-muted-foreground hover:text-primary">
+          <Link
+            to="/projects"
+            className="hidden sm:inline-block text-sm text-muted-foreground hover:text-primary"
+          >
             All projects →
           </Link>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { tag: "Quant", title: "Mean-Reversion Engine", desc: "Python backtester for pairs-trading on S&P 500 equities. Sharpe 1.4 over 5y." },
-            { tag: "Devtools", title: "TickStream", desc: "Low-latency market-data router in Go. Sub-millisecond p99 over WebSocket." },
-            { tag: "ML", title: "Vol Forecaster", desc: "LSTM model predicting realized volatility from option-chain features." },
-            { tag: "Web", title: "Portfolio Tracker", desc: "Full-stack app: live P&L, broker imports, tax-lot accounting. ~600 users." },
+            {
+              tag: "Quant",
+              title: "Mean-Reversion Engine",
+              desc: "Python backtester for pairs-trading on S&P 500 equities. Sharpe 1.4 over 5y.",
+            },
+            {
+              tag: "Devtools",
+              title: "TickStream",
+              desc: "Low-latency market-data router in Go. Sub-millisecond p99 over WebSocket.",
+            },
+            {
+              tag: "ML",
+              title: "Vol Forecaster",
+              desc: "LSTM model predicting realized volatility from option-chain features.",
+            },
+            {
+              tag: "Web",
+              title: "Portfolio Tracker",
+              desc: "Full-stack app: live P&L, broker imports, tax-lot accounting. ~600 users.",
+            },
           ].map((p, i) => (
             <motion.div
               key={p.title}
@@ -121,8 +148,12 @@ function Index() {
               className="group relative p-8 rounded-xl border border-border/60 bg-surface/30 hover:border-primary/60 hover:bg-surface transition-all"
             >
               <div className="flex items-center justify-between mb-8">
-                <span className="font-mono text-xs uppercase tracking-widest text-primary">{p.tag}</span>
-                <span className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all">→</span>
+                <span className="font-mono text-xs uppercase tracking-widest text-primary">
+                  {p.tag}
+                </span>
+                <span className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all">
+                  →
+                </span>
               </div>
               <h3 className="font-display text-3xl font-semibold mb-2">{p.title}</h3>
               <p className="text-muted-foreground">{p.desc}</p>
