@@ -8,5 +8,5 @@ export const profile = {
   summary:
     'I design and ship full-stack products, from backend architecture to polished UI. Here is a look at what I have built.',
   github: 'https://github.com/TanavP2112',
-  email: 'tanavp2@illinois.edu',
+  email: 'tan.pal@outlook.com',
 } as const
