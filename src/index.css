@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+/* Dark mode is driven by a `.dark` class on <html>, not the OS setting, so the
+   site can default to dark and still offer a toggle. See src/lib/theme.ts. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
