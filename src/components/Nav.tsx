@@ -20,7 +20,7 @@ export function Nav() {
               target='_blank'
               rel='noopener noreferrer'
               className='transition-colors hover:text-slate-900 dark:hover:text-slate-100'>
-              GitHub
+              Github
             </a>
             <a
               href={`mailto:${profile.email}`}
