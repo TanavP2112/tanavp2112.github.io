@@ -6,7 +6,7 @@ export const profile = {
   headline: 'I build software end to end.',
   /** One or two sentences. This is the first thing a founder reads — keep it concrete. */
   summary:
-    'I design and ship full-stack products, from backend architecture to polished UI. Here is a look at what I have built.',
+    'I work on quantitative models and applied AI/ML, with a background in software engineering. I am looking for an engineering or analyst new-grad role.',
   github: 'https://github.com/TanavP2112',
   email: 'tan.pal@outlook.com',
 } as const
