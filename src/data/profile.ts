@@ -1,6 +1,3 @@
-/**
- * Everything about you. Edit this file to change the hero, nav, and footer.
- */
 export const profile = {
   name: 'Tanav Palisetti',
   role: 'Software Engineer',
@@ -10,6 +7,6 @@ export const profile = {
   /** One or two sentences. This is the first thing a founder reads — keep it concrete. */
   summary:
     'I design and ship full-stack products, from backend architecture to polished UI. Here is a look at what I have built.',
-  github: 'https://github.com/YOUR-USERNAME',
+  github: 'https://github.com/TanavP2112',
   email: 'tanavp2@illinois.edu',
 } as const

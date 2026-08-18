@@ -1,7 +1,3 @@
-/**
- * Your projects. To add one, append an object to the array below — nothing else
- * needs to change. The grid, cards, and links all read from here.
- */
 export type Project = {
   /** Card title. */
   name: string
@@ -21,33 +17,33 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: 'Project One',
+    name: 'Structural GARCH Quasi-MLE with Vol-Normalized Signal Backtests',
     summary:
       'A one or two sentence summary of what this project does and the problem it solves for its users.',
-    href: 'https://github.com/YOUR-USERNAME/project-one',
+    href: 'https://github.com/TanavP2112/trading-model-projects/tree/main/pred_market_vn_rev_mom',
     linkType: 'repo',
-    tag: 'Web App',
+    tag: 'Quantitative Research',
     stack: ['React', 'TypeScript', 'Node.js'],
-    icon: 'window',
+    icon: 'chart',
   },
   {
-    name: 'Project Two',
+    name: 'Spatial AI (Gies Disruption Lab)',
     summary:
       'A one or two sentence summary describing the purpose, scale, or standout technical detail of this project.',
-    href: 'https://your-live-site.com',
+    href: 'https://spatial-ai.university/',
     linkType: 'live',
-    tag: 'Live Site',
+    tag: 'UIUC Venture',
     stack: ['Next.js', 'Postgres', 'Tailwind'],
-    icon: 'bolt',
+    icon: 'sparkles',
   },
   {
-    name: 'Project Three',
+    name: 'Project Three (WIP)',
     summary:
-      'A one or two sentence summary explaining what motivated this project and who it is useful for.',
-    href: 'https://github.com/YOUR-USERNAME/project-three',
+      'A project currently in the works',
+    href: '',
     linkType: 'repo',
-    tag: 'CLI / Tool',
-    stack: ['Python', 'Rust'],
+    tag: 'WIP',
+    stack: [],
     icon: 'terminal',
   },
 ]
